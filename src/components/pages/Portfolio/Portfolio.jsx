@@ -10,7 +10,21 @@ const portfolioData = [
     link: "https://www.fancode.com/",
     technologies: "ReactJS, React Native, Redux, Javascript, Node.js, Graphql",
     description:
-      "Fancode is a company that provides various services for sports fans. They offer live stream matches, e-commerce, videos, and match stats for their customers. Their web application is built using ReactJS and their mobile application is built using React Native, both using the Elm architecture. Fancode uses GraphQL, SQL, and Java for their backend development. Their goal is to provide the best possible user experience for sports enthusiasts by delivering high-quality content and seamless user interface across all their platforms"
+      "Fancode is a company that provides various services for sports fans. They offer live stream matches, e-commerce, videos, and match stats for their customers. Their web application is built using ReactJS and their mobile application is built using React Native, both using the Elm architecture. Fancode uses GraphQL, SQL, and Java for their backend development. Their goal is to provide the best possible user experience for sports enthusiasts by delivering high-quality content and seamless user interface across all their platforms",
+    tasks: [
+      "Led a frontend team to deliver high-quality web and mobile applications from scratch.",
+      "Designed frontend architecture for scalability, maintainability, and performance.",
+      "Developed a recycled list feature for an ecommerce application to improve user experience.",
+      "Implemented CI/CD pipelines for continuous integration and deployment of applications.",
+      "Optimized application performance through code splitting, chunking, and lazy loading.",
+      "Developed and implemented testing frameworks for frontend applications to ensure code quality and maintainability.",
+      "Improved search engine ranking and developed PWAs using SSR, Service Workers, and Web Workers.",
+      "Designed and implemented a frontend design system for consistent UI across applications.",
+      "Automated MIS reporting through integration with backend systems.",
+      "Collaborated with developers, designers, and stakeholders to deliver projects on time and within budget.",
+      "Stayed up-to-date with emerging technologies and industry trends.",
+      "Experience in a fast-paced, dynamic environment with a focus on meeting project deadlines."
+    ]
   },
   {
     id: 2,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import image1 from "../../../images/blog/blog-01.jpg";
 import image2 from "../../../images/blog/blog-02.jpg";
 import image3 from "../../../images/blog/blog-03.jpg";
@@ -11,7 +11,8 @@ const blogData = [
     image: image1,
     title: "Prototypal Inheritance",
     description:
-        `All objects in Javascript objects have special hidden property that is either null or references other object which is called “prototype”. The object’s ability to access the properties and methods of other object through the special property called prototype is called <strong>prototypal inheritance</strong>.`,
+        "All objects in Javascript objects have special hidden property that is either null or references other object which is called “prototype”. The object’s ability to access the properties and methods of other object through the special property called prototype is called <strong>prototypal inheritance</strong>.",
+    content: "sdsdsdsad asdsad asdasd sadasd sadsa dsada ddasd fdsfds dfsad sadasd adad dsadsa dasdas dasds fsdfsd fsdfds fsdf sfsdf dsa wewe   All objects in Javascript objects have special hidden property that is either null or references other object which is called “prototype”. The object’s ability to access the properties and methods of other object through the special property called prototype is called <strong>prototypal inheritance</strong>."
 
   },
   {
@@ -38,11 +39,12 @@ const blogData = [
 ];
 
 const Blog = () => {
+  const [selectedBlog, setSelectedState] = useState(null)
   return (
     <section className="pb-10">
       <div className="flex flex-wrap md:px-4">
-        {blogData.map((blog, id) => (
-          <BlogItem blog={blog} key={id} />
+        {blogData.map((blog, index) => (
+          <BlogItem blog={blog} key={blog.id} setSelectedState={setSelectedState} selectedBlog={selectedBlog} index={index} />
         ))}
       </div>
     </section>

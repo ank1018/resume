@@ -34,11 +34,21 @@ const socials = [
   }
 ];
 
+const PDF_URL = "http://localhost:3000/ankur_resume.pdf"
+
 const Sidebar = () => {
+  const handleDownloadClick = () => {
+    const aTag = document.createElement("a")
+    aTag.href = PDF_URL
+    aTag.setAttribute("download", 'resume')
+    document.body.appendChild(aTag)
+    aTag.click();
+    aTag.remove()
+  }
   return (
     <aside className="sticky top-0 bg-white md:mx-8 lg:mx-4 mb-8 p-6 shadow-md rounded-md -mt-40">
       <div className="w-24 h-24 rounded-md overflow-hidden mx-auto mb-5">
-        <img src={''} alt="ankursingh" className="w-full" />
+        <img src={profile} alt="ankursingh" className="w-full" />
       </div>
       <div className="text-center">
         <h1 className="text-xl text-gray-800 font-bold mb-1">Ankur Singh</h1>
@@ -48,13 +58,13 @@ const Sidebar = () => {
             Fancode by Dreamsports
           </a>
         </p>
-        <a
-          href="#0"
+        <div
+          onClick={handleDownloadClick}
+          href="PDF_URL"
           className="inline-block mb-3 rounded bg-purple-600 text-center border-0 py-2 px-6 text-white leading-7 tracking-wide hover:bg-purple-800"
-          download="Resume"
         >
           Download Resume
-        </a>
+        </div>
         <ul className="flex flex-wrap justify-center">
           {socials.map((social, id) => (
             <SocialIcon social={social} key={id} />

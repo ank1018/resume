@@ -2,7 +2,7 @@ import React from "react";
 import { FaRegEye } from "react-icons/fa";
 
 const PortfolioItem = (props) => {
-  const { image, title, link, description, technologies } = props.portfolio;
+  const { image, title, link, description, technologies, tasks } = props.portfolio;
   return (
     <div className="w-full">
       <div className="my-4 md:mx-4 shadow p-6 rounded-md bg-white group hover:shadow-md">
@@ -31,6 +31,11 @@ const PortfolioItem = (props) => {
         <h3 className="text-lg font-medium text-gray-800 mb-2">{title}</h3>
         {technologies ? <p className="text-gray-600 mb-2"><b>Technologies: </b>{technologies}</p> : null}
         <p className="text-gray-400">{description}</p>
+        {tasks ? <ul className="mt-4 ml-4">
+          {tasks.map(task => {
+            return <li className="text-gray-400 list-disc" key={task}>{task}</li>
+          })}
+        </ul> : null}
       </div>
     </div>
   );
